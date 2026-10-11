@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SevaGuide | Public Service Helper</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">S</div>
+    <div><strong>SevaGuide</strong><small>Public-service guidance concept</small></div>
+    <span class="badge">DEMO</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">THE RIGHT SERVICE. THE RIGHT DIRECTION.</p>
+      <h1>Government services,<br><span>made easier to understand.</span></h1>
+      <p class="intro">Tell us what you need. Get a simple starting point and a checklist to help you prepare.</p>
+    </section>
+
+    <section class="panel">
+      <label for="need">What certificate or proof do you need?</label>
+      <textarea id="need" rows="3" placeholder="For example: I need proof of residence for a college application."></textarea>
+      <p class="privacy">Please do not enter Aadhaar, PAN, OTPs, passwords, or other sensitive personal information.</p>
+      <button id="guideBtn">Guide me <span>→</span></button>
+      <p id="error" class="error" role="alert"></p>
+    </section>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <div class="result-head">
+        <div><p class="eyebrow">YOUR STARTING POINT</p><h2 id="serviceTitle"></h2></div>
+        <div class="check-icon">✓</div>
+      </div>
+      <p id="summary"></p>
+      <h3>Preparation checklist</h3>
+      <ul id="checklist"></ul>
+      <div class="next-step"><strong>Next step</strong><p id="nextStep"></p></div>
+      <p class="notice" id="notice"></p>
+    </section>
+
+    <section class="how">
+      <h2>How SevaGuide helps</h2>
+      <div class="steps">
+        <article><span>01</span><h3>Describe</h3><p>Explain your need in everyday language.</p></article>
+        <article><span>02</span><h3>Understand</h3><p>Review a plain-language service guide.</p></article>
+        <article><span>03</span><h3>Prepare</h3><p>Use a checklist and confirm details officially.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>SevaGuide is an independent prototype, not an official government website. Always verify requirements through official sources.</footer>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
